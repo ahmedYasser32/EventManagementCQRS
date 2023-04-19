@@ -1,5 +1,6 @@
 using Infrastructure;
 using System.Reflection;
+
 using MediatR;
 var builder = WebApplication.CreateBuilder(args);
 

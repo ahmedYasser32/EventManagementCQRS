@@ -35,7 +35,7 @@ namespace CQRS.Application.Features.Events.Queries
                     .Include(x => x.PhotoAlbum)
                     .ProjectTo<EventDTO>(mapper.ConfigurationProvider).FirstOrDefaultAsync();
 
-                if (result == null) return null;
+                if (result == null) throw new Exception("No Event Fouund");
 
                 return result;
             }
