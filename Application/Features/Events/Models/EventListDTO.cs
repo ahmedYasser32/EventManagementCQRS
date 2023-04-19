@@ -3,7 +3,7 @@ using Domain.Entities;
 
 namespace CQRS.Application.Features.Events.Models
 {
-    public class EventDListDTO : IMapFrom<Event>
+    public class EventListDTO : IMapFrom<Event>
     {
         public int Id { get; set; }
         public string ArabicTitle { get; set; }

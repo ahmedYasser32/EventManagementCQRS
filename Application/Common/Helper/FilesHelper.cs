@@ -9,15 +9,15 @@ namespace CQRS.Application.Common.Helper
    
 
        
-        public static async Task<string> SaveFiles(string type, IFormFile file)
+        public static async Task<string> SaveFiles(IFormFile file)
         {
 
             if (file != null)
             {
                 //create it if it doesnot exist
-                Directory.CreateDirectory(@$"{Directory.GetCurrentDirectory()}+/Images/{type}/");
+                Directory.CreateDirectory(@$"{Directory.GetCurrentDirectory()}+/Images/");
 
-                string FileFolderPath = Directory.GetCurrentDirectory() + @$"/Images/{type}/";
+                string FileFolderPath = Directory.GetCurrentDirectory() + @$"/Images/";
 
 
                 //2) Get File Name

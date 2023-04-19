@@ -1,6 +1,6 @@
 ﻿using CQRS.Application.Common.Mapping;
 using Domain.Entities;
-namespace CQRS.Application.Features.Event.Models
+namespace CQRS.Application.Features.Events.Models
 
 {
     public class PhotoAlbumDTO :IMapFrom<PhotoAlbum>

@@ -17,7 +17,7 @@ namespace Domain.Entities
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public Source Source { get; set; }
-        public IEnumerable<Category> Categories { get; set; }
+        public ICollection<Category> Categories { get; set; }
 
         public PhotoAlbum PhotoAlbum { get; set; }
 

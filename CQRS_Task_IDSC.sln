@@ -4,6 +4,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI", "WebUI\WebUI.csproj", "{71E40569-902F-4751-B939-B06874712160}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AAA5C537-82A2-4086-B5B7-ABE58B29C6F8} = {AAA5C537-82A2-4086-B5B7-ABE58B29C6F8}
+		{43308F3B-B5B6-4606-93D1-7A12329A63CD} = {43308F3B-B5B6-4606-93D1-7A12329A63CD}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{43308F3B-B5B6-4606-93D1-7A12329A63CD}"
 EndProject
@@ -12,7 +16,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastru
 		{43308F3B-B5B6-4606-93D1-7A12329A63CD} = {43308F3B-B5B6-4606-93D1-7A12329A63CD}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{AAA5C537-82A2-4086-B5B7-ABE58B29C6F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Application", "Application\CQRS.Application.csproj", "{AAA5C537-82A2-4086-B5B7-ABE58B29C6F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
