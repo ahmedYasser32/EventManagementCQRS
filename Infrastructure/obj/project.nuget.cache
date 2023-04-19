@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7+sWB/EDesqx6vxo6AUbUNz/6Snj7OTI4QGNpGUElxIKbzhzcYtqStPnFrhm84q5bQ2/qswBrn8xHo9oR31jiA==",
+  "dgSpecHash": "JUoaI5+RaKtwphmW6S01nhDZfWRpg3ZeuJOL0ZF+zChTG8al7RMLNFxKlmrxmGuryQreQ1m7kCl4clsjCgAtEw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ahmad yasser\\source\\repos\\CQRS_Task_IDSC\\WebUI\\WebUI.csproj",
+  "projectFilePath": "C:\\Users\\Ahmad yasser\\source\\repos\\CQRS_Task_IDSC\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ahmad yasser\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Ahmad yasser\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
@@ -14,6 +14,7 @@
     "C:\\Users\\Ahmad yasser\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.16\\microsoft.entityframeworkcore.design.6.0.16.nupkg.sha512",
     "C:\\Users\\Ahmad yasser\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.16\\microsoft.entityframeworkcore.relational.6.0.16.nupkg.sha512",
     "C:\\Users\\Ahmad yasser\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.16\\microsoft.entityframeworkcore.sqlserver.6.0.16.nupkg.sha512",
+    "C:\\Users\\Ahmad yasser\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.16\\microsoft.entityframeworkcore.tools.6.0.16.nupkg.sha512",
     "C:\\Users\\Ahmad yasser\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Ahmad yasser\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
     "C:\\Users\\Ahmad yasser\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
