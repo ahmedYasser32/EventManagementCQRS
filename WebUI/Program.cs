@@ -1,5 +1,6 @@
 using Infrastructure;
-
+using System.Reflection;
+using MediatR;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,8 +8,13 @@ builder.Services.AddControllersWithViews();
 
 //Add database Context
 
-
 builder.Services.AddDbContext<ApplicationDbContext>();
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
+builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+
+//Add configuration services of the application layer
+
 
 var app = builder.Build();
 
