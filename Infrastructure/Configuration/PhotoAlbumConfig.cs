@@ -16,15 +16,20 @@ namespace InfraStructure.Configuration
         
         public void Configure(EntityTypeBuilder<PhotoAlbum> builder)
         {
-            builder.HasKey(p => p.Id);
+            builder.HasKey(A => A.Id);
 
-            builder.HasMany(p => p.Events)
+            builder.HasMany(A => A.Events)
                    .WithOne(e => e.PhotoAlbum)
                    .OnDelete(DeleteBehavior.NoAction);
 
-            builder.Property(p => p.Title)
-                .HasDefaultValue("No title"); 
-  
+            builder.HasMany(A => A.Photos)
+                   .WithMany(p => p.Albums);
+                   
+
+            builder.Property(A => A.Title)
+                .HasDefaultValue("No title");
+            
+
         }
     }
 }

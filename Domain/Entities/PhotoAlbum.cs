@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,13 +9,11 @@ namespace Domain.Entities
 {
     public class PhotoAlbum
     {
-        public PhotoAlbum()
-        {
-            PhotoPaths = new List<string>();
-        }
+       
         public int Id { get; set; }
         public string Title { get; set; }
-        public List<string> PhotoPaths { get; set; }
+       
+        public List<Photo> Photos { get; set; }
         public IEnumerable<Event>? Events { get; set; }
 
 

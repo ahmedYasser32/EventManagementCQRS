@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 
@@ -14,7 +15,7 @@ namespace Infrastructure
         }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+            options.UseSqlServer("Server=.;Database=CQRSTaskDB;Trusted_Connection=True;");
         }
         public DbSet<Event> Event { get; set; }
         public DbSet<Category> Category { get; set; }
