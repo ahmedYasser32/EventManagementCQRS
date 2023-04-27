@@ -7,7 +7,11 @@ using static CQRS.Application.Common.Helper.FilesHelper;
 namespace CQRS.Application.Features.Events.Commands.Create
 {
     public class CreateEventCommand : EventDTO, IRequest<string>
-    {
+    { 
+        public int? SourceId { get; set; } 
+        public int? PhotoAlbumId { get; set; } 
+        public List<int>? CategoriesId { get; set; }   
+    }
         public class Handler : IRequestHandler<CreateEventCommand, string>
         {
 
@@ -43,20 +47,18 @@ namespace CQRS.Application.Features.Events.Commands.Create
                         StartDate = request.StartDate,
                         EndDate = request.EndDate,
                         CoverPhotoPath = request.CoverPhotoPath,
-                        Source = db.Source.Find(request.Source.Id),
-                        PhotoAlbum = db.PhotoAlbum.Find(request.PhotoAlbum.Id)
+                        Source = db.Source.Find(request.SourceId),
+                        PhotoAlbum = db.PhotoAlbum.Find(request.PhotoAlbumId)
                     };
 
                     List<Category> Categories = new();
                     entity.Categories = Categories;
 
-                    if (request.Categories != null)
+                    if (request.CategoriesId != null)
                     {
-                        foreach (CategoryDTO cat in request.Categories)
+                        foreach (int CategoryId in request.CategoriesId)
                         {
-                            int CategoryId = cat.Id;
-                            Console.WriteLine(CategoryId);
-                            
+              
                             var category = db.Category.Find(CategoryId);
 
                             if (category != null)
@@ -82,4 +84,4 @@ namespace CQRS.Application.Features.Events.Commands.Create
             }
         }
     }
-}
+

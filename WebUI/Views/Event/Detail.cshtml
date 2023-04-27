@@ -1,0 +1,22 @@
+﻿
+@using CQRS.Application.Features.Events.Models
+@model EventDTO
+
+<div class="container">
+    <div class="row">
+        <a asp-controller="Event" asp-action="Create" class="btn btn-success">Create</a>
+       
+            <div class="col-md-3 m-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">@Model.Title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted"> From @Model.StartDate to @Model.EndDate $</h6>
+                        <p class="card-text">Source : @Model.Source.Name</p> 
+                        <p class="card-text">Content : @Model.Content</p>
+                        <a asp-controller="Event" asp-action="Detail" asp-route-id="@Model.Id" class="btn btn-success">Details</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

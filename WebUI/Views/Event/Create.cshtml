@@ -1,0 +1,99 @@
+﻿@using CQRS.Application.Features.Events.Commands.Create
+@using Domain.Entities
+@model CreateEventCommand
+
+
+<div class="block-header">
+    <h2>Create Event</h2>
+</div>
+
+
+<form asp-controller="Event" asp-action="Create" class="form-group" method="post">
+
+
+
+    <Text-Box asp-for="ArabicTitle" label="الاسم باللغة العربية" required="true" error-message="برجاء ادخال الاسم باللغة العربية">
+        <span asp-validation-for="ArabicTitle" style="color:red"></span>
+    </Text-Box>
+
+    <Text-Box asp-for="Title" label="Event Title  " required="true" error-message="please enter title">
+        <span asp-validation-for="Title" style="color:red"></span>
+    </Text-Box>
+    <br />
+
+    <Text-Box asp-for="Address" label="Event Address" required="true" error-message="please enter address">
+        <span asp-validation-for="Address" style="color:red"></span>
+    </Text-Box>
+    <br />
+
+    <Text-Box asp-for="StartDate" label="StartDate" required="true" error-message="please enter date" type=" date">
+        <span asp-validation-for="StartDate" style="color:red"></span>
+    </Text-Box>
+    <br />
+    <Text-Box asp-for="EndDate" label="End Date" required="true" error-message="please enter date" type="EndDate">
+        <span asp-validation-for="EndDate" style="color:red"></span>
+    </Text-Box>
+    <br />
+    <Text-Box asp-for="Content" label="Content" required="true" error-message="please enter Content">
+        <span asp-validation-for="EndDate" style="color:red"></span>
+    </Text-Box>
+    <br />
+
+    <h3>choose a source</h3>
+    <select asp-for="SourceId" asp-items="@ViewBag.Source">
+    </select>
+
+    <br />
+
+
+    <h3>choose a photoAlbum</h3>
+    <select asp-for="PhotoAlbumId" required="True" asp-items="@ViewBag.PhotoAlbum" id="PhotoAlbumId">
+    </select>
+
+
+    <br />
+    <h3>choose categories</h3>
+    <select multiple="multiple" asp-for="CategoriesId" asp-items="@ViewBag.Category">
+    </select>
+
+    <br />
+
+    <File-Upload id="photo" asp-for="CoverPhoto" label="Add event cover" property-name="Photo" value="@Model?.CoverPhoto" error-message="برجاء إدخال صورة "></File-Upload>
+    <center>
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <input type="reset" value="Cancel" class="btn btn-danger" />
+    </center>
+
+</form>
+<script>
+  $(document).ready(function () {
+
+    @if(!string.IsNullOrEmpty(Model?.Photo)){
+      <text>
+          $('#uploadedfile-photo').css({
+              "display": "flex", "align-items": "center"
+          })
+
+          $("#title-photo").html(`
+          <a href="/upload/Event/Photo/@Model.Id/@Model.CoverPhoto" target="_blank" style="text-decoration:none;color:inherit">@Model.CoverPhoto</a>
+          `)
+      </text>
+    }
+
+  
+  $(function () {
+      $('#PhotoFile').change(function (event) {
+
+          var inputValue = event.target.files[0].name
+           $('#uploadedfile-photo').css({
+                    "display": "flex", "align-items": "center"
+                })
+
+
+          $('#title-photo').text(inputValue)
+          $('#Photo').val(inputValue)
+      })
+  })
+
+</script>
+}

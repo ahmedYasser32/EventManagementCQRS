@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CQRS.Application.Features.Events.Models
+namespace CQRS.Application.Features.Sources.Models
 
 {
     public class SourceDTO :IMapFrom<Source>

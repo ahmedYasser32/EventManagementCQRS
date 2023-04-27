@@ -15,12 +15,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Ahmad yasser\source\repos\CQRS_Task_IDSC\WebUI
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Ahmad yasser/source/repos/CQRS_Task_IDSC/WebUI/Views/Home/Detail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhaWwuY3NodG1s
+[C:/Users/Ahmad yasser/source/repos/CQRS_Task_IDSC/WebUI/Views/Event/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ahmad yasser/source/repos/CQRS_Task_IDSC/WebUI/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/Ahmad yasser/source/repos/CQRS_Task_IDSC/WebUI/Views/Event/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ahmad yasser/source/repos/CQRS_Task_IDSC/WebUI/Views/Event/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ahmad yasser/source/repos/CQRS_Task_IDSC/WebUI/Views/Event/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Ahmad yasser/source/repos/CQRS_Task_IDSC/WebUI/Views/Shared/Error.cshtml]

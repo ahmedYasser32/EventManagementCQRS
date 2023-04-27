@@ -68,6 +68,6 @@ C:\Users\Ahmad yasser\source\repos\CQRS_Task_IDSC\WebUI\obj\Debug\net6.0\ref\Web
 C:\Users\Ahmad yasser\source\repos\CQRS_Task_IDSC\WebUI\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\Ahmad yasser\source\repos\CQRS_Task_IDSC\WebUI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Ahmad yasser\source\repos\CQRS_Task_IDSC\WebUI\bin\Debug\net6.0\MediatR.dll
-C:\Users\Ahmad yasser\source\repos\CQRS_Task_IDSC\WebUI\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\Ahmad yasser\source\repos\CQRS_Task_IDSC\WebUI\bin\Debug\net6.0\CQRS.Application.dll
+C:\Users\Ahmad yasser\source\repos\CQRS_Task_IDSC\WebUI\bin\Debug\net6.0\CQRS.Application.pdb
 C:\Users\Ahmad yasser\source\repos\CQRS_Task_IDSC\WebUI\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\Ahmad yasser\source\repos\CQRS_Task_IDSC\WebUI\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll

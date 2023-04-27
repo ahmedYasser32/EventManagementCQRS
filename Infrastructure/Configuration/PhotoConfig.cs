@@ -13,7 +13,7 @@ namespace InfraStructure.Configuration
         {
             builder.HasKey(p => p.Id);
             builder.Property(p => p.Path)
-               .HasDefaultValue(@"C:\Users\Ahmad yasser\source\repos\CQRS_Task_IDSC\no-img.jpg");
+               .HasDefaultValue("~/Images/no-img.jpg");
 
         }
     }
