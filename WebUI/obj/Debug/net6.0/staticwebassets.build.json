@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "e8s1hiXi3GT4Rh/tGYAV6986iOux2Gy5IFlSNAICl/8=",
+  "Hash": "v/FEOZDnkQoIT9sCyosiTh+2cQArK64QXIPowSN8Enw=",
   "Source": "WebUI",
   "BasePath": "_content/WebUI",
   "Mode": "Default",
@@ -102,6 +102,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\070710a3-81e5-4d4f-b96d-d8c82c566961writing.png"
     },
     {
+      "Identity": "C:\\Users\\Ahmad yasser\\source\\repos\\CQRS_Task_IDSC\\WebUI\\wwwroot\\Images\\339505b6-cb21-493a-b794-b2fd93259516e.png",
+      "SourceId": "WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ahmad yasser\\source\\repos\\CQRS_Task_IDSC\\WebUI\\wwwroot\\",
+      "BasePath": "_content/WebUI",
+      "RelativePath": "Images/339505b6-cb21-493a-b794-b2fd93259516e.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\339505b6-cb21-493a-b794-b2fd93259516e.png"
+    },
+    {
       "Identity": "C:\\Users\\Ahmad yasser\\source\\repos\\CQRS_Task_IDSC\\WebUI\\wwwroot\\Images\\45228bbf-5abb-4f1c-aeb9-3bd065e63ecbwriting.png",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
@@ -117,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\45228bbf-5abb-4f1c-aeb9-3bd065e63ecbwriting.png"
+    },
+    {
+      "Identity": "C:\\Users\\Ahmad yasser\\source\\repos\\CQRS_Task_IDSC\\WebUI\\wwwroot\\Images\\b80879f7-1bc2-4763-8684-38012e07214ae.png",
+      "SourceId": "WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ahmad yasser\\source\\repos\\CQRS_Task_IDSC\\WebUI\\wwwroot\\",
+      "BasePath": "_content/WebUI",
+      "RelativePath": "Images/b80879f7-1bc2-4763-8684-38012e07214ae.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\b80879f7-1bc2-4763-8684-38012e07214ae.png"
     },
     {
       "Identity": "C:\\Users\\Ahmad yasser\\source\\repos\\CQRS_Task_IDSC\\WebUI\\wwwroot\\Images\\e5d61fc5-531c-449c-bb0c-d9e1b105313dbookspng.png",
@@ -151,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\f6f68e0a-9126-457d-851e-d800a89424c3game-controller-gamepad-joystick-png-favpng-cMZyTrvMvmkw8YpZFCdJGKxWi.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Ahmad yasser\\source\\repos\\CQRS_Task_IDSC\\WebUI\\wwwroot\\Images\\f7714755-b218-4100-ad43-c1df5527763ee.png",
+      "SourceId": "WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ahmad yasser\\source\\repos\\CQRS_Task_IDSC\\WebUI\\wwwroot\\",
+      "BasePath": "_content/WebUI",
+      "RelativePath": "Images/f7714755-b218-4100-ad43-c1df5527763ee.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\f7714755-b218-4100-ad43-c1df5527763ee.png"
     },
     {
       "Identity": "C:\\Users\\Ahmad yasser\\source\\repos\\CQRS_Task_IDSC\\WebUI\\wwwroot\\Images\\no_img.jpg",

@@ -50,6 +50,7 @@ public class UpdateEventCommand : EventDTO, IRequest<EventDTO>
                     entity.CoverPhoto = request.CoverPhoto;
                 }
 
+                request.CoverPhoto = await SaveFiles(request.CoverPhotoFormFile);
                 entity.Address = request.Address;
                 entity.Content = request.Content;
                 entity.ArabicTitle = request.ArabicTitle;
@@ -60,7 +61,6 @@ public class UpdateEventCommand : EventDTO, IRequest<EventDTO>
                 entity.Source = db.Source.Find(request.SourceId);
                 entity.PhotoAlbum = db.PhotoAlbum.Find(request.PhotoAlbumId);
 
-                request.CoverPhoto = await SaveFiles(request.CoverPhotoFormFile);
 
                 if (request.CategoriesId != null)
                 {
