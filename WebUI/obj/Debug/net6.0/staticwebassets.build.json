@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "v/FEOZDnkQoIT9sCyosiTh+2cQArK64QXIPowSN8Enw=",
+  "Hash": "dp1I+JME15QtKcUobcpt4gFCuwwKRIAvXZr9L/2MXKM=",
   "Source": "WebUI",
   "BasePath": "_content/WebUI",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\45228bbf-5abb-4f1c-aeb9-3bd065e63ecbwriting.png"
+    },
+    {
+      "Identity": "C:\\Users\\Ahmad yasser\\source\\repos\\CQRS_Task_IDSC\\WebUI\\wwwroot\\Images\\71a1c0e3-7c34-409a-b7da-5450751c693ee.png",
+      "SourceId": "WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ahmad yasser\\source\\repos\\CQRS_Task_IDSC\\WebUI\\wwwroot\\",
+      "BasePath": "_content/WebUI",
+      "RelativePath": "Images/71a1c0e3-7c34-409a-b7da-5450751c693ee.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\71a1c0e3-7c34-409a-b7da-5450751c693ee.png"
     },
     {
       "Identity": "C:\\Users\\Ahmad yasser\\source\\repos\\CQRS_Task_IDSC\\WebUI\\wwwroot\\Images\\b80879f7-1bc2-4763-8684-38012e07214ae.png",

@@ -19,21 +19,23 @@
                 <div class="container">
            
                     <div class="row">
+                        @foreach (var item in @Model.PhotoAlbum.Photos)
+                        {
 
-                     
                             <div class="col-md-3 m-3">
                                 <div class="card" style="width: 18rem;">
-                                    <div class="card-body">
-                                        @foreach (var item in @Model.PhotoAlbum.Photos)
-                                        {
-                                            <img src="~/Images/@item.Path" class="card-img" height="60" width="70">}
+                                    <div class="card-img" >
+
+                                        <img src="~/Images/@item.Path" title="@item.Path" height ="90" width="90"  />
+
+                                        
 
                                         <br />
 
                                     </div>
                                 </div>
                             </div>
-
+                        }
                         </div>
 
                         <a asp-controller="Event" asp-action="Update" class="btn btn-success" asp-route-id="@Model.Id">Update</a>
