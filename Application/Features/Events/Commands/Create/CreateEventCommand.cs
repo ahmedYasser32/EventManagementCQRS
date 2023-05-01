@@ -10,7 +10,9 @@ namespace CQRS.Application.Features.Events.Commands.Create
     { 
         public int? SourceId { get; set; } 
         public int? PhotoAlbumId { get; set; } 
-        public List<int>? CategoriesId { get; set; }   
+        public List<int>? CategoriesId { get; set; }
+        
+
     }
         public class Handler : IRequestHandler<CreateEventCommand, string>
         {
@@ -27,14 +29,14 @@ namespace CQRS.Application.Features.Events.Commands.Create
             {
                 try
                 {
-                    if (request.CoverPhotoPath != null)
+                    if (request.CoverPhotoFormFile != null)
                     {
-                        request.CoverPhotoPath = await SaveFiles(request.CoverPhoto);
+                        request.CoverPhoto = await SaveFiles(request.CoverPhotoFormFile);
                     }
 
                     else
                     {
-                        request.CoverPhotoPath = " ";
+                        request.CoverPhoto = " ";
                     }
 
 
@@ -46,7 +48,7 @@ namespace CQRS.Application.Features.Events.Commands.Create
                         Title = request.Title,
                         StartDate = request.StartDate,
                         EndDate = request.EndDate,
-                        CoverPhotoPath = request.CoverPhotoPath,
+                        CoverPhoto = request.CoverPhoto,
                         Source = db.Source.Find(request.SourceId),
                         PhotoAlbum = db.PhotoAlbum.Find(request.PhotoAlbumId)
                     };

@@ -14,8 +14,7 @@ namespace InfraStructure.Configuration
             builder.HasKey(e => e.Id);
 
 
-            builder.Property(e => e.CoverPhotoPath)
-                .HasDefaultValue(@"C:\Users\Ahmad yasser\source\repos\CQRS_Task_IDSC\no-img.jpg");
+            builder.Property(e => e.CoverPhoto).HasMaxLength(1024);
 
 
             builder.HasMany(e => e.Categories)

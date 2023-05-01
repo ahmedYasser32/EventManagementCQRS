@@ -1,15 +1,19 @@
-﻿@page "/Events/home"
+﻿
 @using CQRS.Application.Features.Events.Models
 @model IEnumerable<EventListDTO>
 
 <div class="container">
+    <a asp-controller="Event" asp-action="Create" class="btn btn-success">Create</a>
     <div class="row">
-        <a asp-controller="Event" asp-action="Create"  class="btn btn-success">Create</a>
+     
         @foreach (var item in Model)
         {
             <div class="col-md-3 m-3">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
+                        @if (item.CoverPhotoPath != null)
+                        {<img src="~/Images/@item.CoverPhotoPath"  height="30" width="30" />}
+
                         <h5 class="card-title">@item.Title</h5>
                         <h6 class="card-subtitle mb-2 text-muted"> From @item.StartDate to @item.EndDate $</h6>
                         <p class="card-text">Source : @item.Source.Name</p>

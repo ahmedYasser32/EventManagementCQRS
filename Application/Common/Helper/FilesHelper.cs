@@ -15,9 +15,9 @@ namespace CQRS.Application.Common.Helper
             if (file != null)
             {
                 //create it if it doesnot exist
-                Directory.CreateDirectory(@$"{Directory.GetCurrentDirectory()}+/Images/");
+                Directory.CreateDirectory(@$"{Directory.GetCurrentDirectory()}+/wwwroot/Images/");
 
-                string FileFolderPath = Directory.GetCurrentDirectory() + @$"/Images/";
+                string FileFolderPath = Directory.GetCurrentDirectory() + "/wwwroot/Images/";
 
 
                 //2) Get File Name
@@ -40,7 +40,7 @@ namespace CQRS.Application.Common.Helper
 
                 }
 
-                return FinalFilePath;
+                return FileName;
             }
 
             return "File is empty";

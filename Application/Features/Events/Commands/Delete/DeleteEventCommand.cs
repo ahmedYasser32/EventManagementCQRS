@@ -25,16 +25,19 @@ namespace CQRS.Application.Features.Events.Commands.Delete
 
                 var entity = db.Event.Find(request.Id);
 
+
                 if (entity == null) throw new Exception("Event does not exist");
 
-                if (entity.CoverPhotoPath != null)
-                {
-                    File.Delete(entity.CoverPhotoPath);
-                }
                 db.Event.Remove(entity);
 
                 await db.SaveChangesAsync();
 
+
+                if (entity.CoverPhoto != null)
+                {
+                    File.Delete(entity.CoverPhoto);
+                }
+            
                 return "Deleted";
 
             }

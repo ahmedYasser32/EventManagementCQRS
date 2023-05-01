@@ -34,6 +34,7 @@ namespace CQRS.Application.Features.Events.Queries
 
                 return result;
             }
+
             catch (Exception ex)
             {
                 return new List<CategoryDTO>();

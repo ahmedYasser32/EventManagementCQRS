@@ -7,10 +7,16 @@ using Domain.Entities;
 
 namespace CQRS.Application.Features.Events.Commands.Update;
 
-public class UpdateEventCommand : EventDTO, IRequest<string>
+public class UpdateEventCommand : EventDTO, IRequest<EventDTO>
+
 {
-    public class Handler : IRequestHandler<UpdateEventCommand, string>
+    public int? SourceId { get; set; }
+    public int? PhotoAlbumId { get; set; }
+    public List<int>? CategoriesId { get; set; }
+
+    public class Handler : IRequestHandler<UpdateEventCommand, EventDTO>
     {
+       
 
         private readonly ApplicationDbContext db;
         public Handler(ApplicationDbContext db)
@@ -19,7 +25,7 @@ public class UpdateEventCommand : EventDTO, IRequest<string>
             this.db = db;
         }
 
-        public async Task<string> Handle(UpdateEventCommand request, CancellationToken cancellationToken)
+        public async Task<EventDTO> Handle(UpdateEventCommand request, CancellationToken cancellationToken)
         {
             try
             { 
@@ -30,18 +36,18 @@ public class UpdateEventCommand : EventDTO, IRequest<string>
                     throw new Exception("Event Not Found!");
                 }
 
-                if (request.CoverPhoto != null)
+                if (request.CoverPhotoFormFile != null)
                 {
                     
-                    request.CoverPhotoPath = await SaveFiles(request.CoverPhoto);
+                    
 
-                    if (entity.CoverPhotoPath != null)
+                    if (entity.CoverPhoto != null)
                     {
 
-                        File.Delete(entity.CoverPhotoPath);
+                        File.Delete(entity.CoverPhoto);
                     }
 
-                    entity.CoverPhotoPath = request.CoverPhotoPath;
+                    entity.CoverPhoto = request.CoverPhoto;
                 }
 
                 entity.Address = request.Address;
@@ -50,29 +56,31 @@ public class UpdateEventCommand : EventDTO, IRequest<string>
                 entity.Title = request.Title;
                 entity.StartDate = request.StartDate;
                 entity.EndDate = request.EndDate;
-                entity.CoverPhotoPath = request.CoverPhotoPath;
-                entity.Source = db.Source.Find(request.Source.Id);
-                entity.PhotoAlbum = db.PhotoAlbum.Find(request.PhotoAlbum.Id);
-               
+                entity.CoverPhoto = request.CoverPhoto;
+                entity.Source = db.Source.Find(request.SourceId);
+                entity.PhotoAlbum = db.PhotoAlbum.Find(request.PhotoAlbumId);
 
-                if (request.Categories != null)
+                request.CoverPhoto = await SaveFiles(request.CoverPhotoFormFile);
+
+                if (request.CategoriesId != null)
                 {
-                    List<Category> Categories = new();
 
+                    List<Category> Categories = new();
                     entity.Categories = Categories;
 
-                    foreach (CategoryDTO cat in request.Categories)
+                    if (request.CategoriesId != null)
                     {
-                        int CategoryId = cat.Id;
-                        Console.WriteLine(CategoryId);
-
-                        var category = db.Category.Find(CategoryId);
-
-                        if (category != null)
+                        foreach (int CategoryId in request.CategoriesId)
                         {
-                            entity.Categories.Add(category);
-                        }
 
+                            var category = db.Category.Find(CategoryId);
+
+                            if (category != null)
+                            {
+                                entity.Categories.Add(category);
+                            }
+
+                        }
                     }
                 }
 
@@ -80,9 +88,9 @@ public class UpdateEventCommand : EventDTO, IRequest<string>
 
                 await db.SaveChangesAsync();
 
-                return "Event Created Succesfully";
+                return request;
             }
-            catch (Exception ex) { return ex.Message; }
+            catch (Exception ex) { return null; }
     }
     }
 }

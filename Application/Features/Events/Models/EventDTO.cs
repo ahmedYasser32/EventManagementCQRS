@@ -12,8 +12,8 @@ namespace CQRS.Application.Features.Events.Models
         public string Title { get; set; }
         public string Content { get; set; }
         public string Address { get; set; }
-        public string? CoverPhotoPath { get; set; } 
-        public IFormFile?  CoverPhoto { get; set; }
+        public string? CoverPhoto { get; set; } 
+        public IFormFile?  CoverPhotoFormFile { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public SourceDTO? Source { get; set; }

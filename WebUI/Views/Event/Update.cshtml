@@ -1,16 +1,15 @@
-﻿@using CQRS.Application.Features.Events.Commands.Create
+﻿@using CQRS.Application.Features.Events.Commands.Update
 @using Domain.Entities
-@model CreateEventCommand
+@model UpdateEventCommand
 
 
 <div class="block-header">
-    <h2>Create Event</h2>
+    <h2>Update Event</h2>
 </div>
 
 
-<form asp-controller="Event" asp-action="Create" class="form-group" method="post" enctype="multipart/form-data">
-    
-
+<form asp-controller="Event" asp-action="Update" class="form-group" method="post enctype="multipart/form-data">
+    <input type="hidden" asp-for="Id" />
 
 
     <Text-Box asp-for="ArabicTitle" label="الاسم باللغة العربية" required="true" error-message="برجاء ادخال الاسم باللغة العربية">
@@ -27,7 +26,6 @@
     </Text-Box>
     <br />
 
-
     <Text-Box asp-for="StartDate" label="StartDate" required="true" error-message="please enter date" type=" date">
         <span asp-validation-for="StartDate" style="color:red"></span>
     </Text-Box>
@@ -36,9 +34,9 @@
         <span asp-validation-for="EndDate" style="color:red"></span>
     </Text-Box>
     <br />
-    <Text-Area asp-for="Content" label="Content" required="true" error-message="please enter Content">
+    <Text-Box asp-for="Content" label="Content" required="true" error-message="please enter Content">
         <span asp-validation-for="EndDate" style="color:red"></span>
-    </Text-Area>
+    </Text-Box>
     <br />
 
     <h3>choose a source</h3>
@@ -59,7 +57,7 @@
     </select>
 
     <br />
-   
+
     <div class="row mt-2">
         <div class="col-12">
             <label class="col-form-label">Select File</label>
@@ -68,44 +66,9 @@
         </div>
     </div>
 
-
-    @*<File-Upload id="CoverPhoto" asp-for="CoverPhoto" label="Add event cover" property-name="CoverPhoto" value="@Model?.CoverPhoto" error-message="برجاء إدخال صورة "></File-Upload>*@
     <center>
         <input type="submit" value="Save" class="btn btn-primary" />
         <input type="reset" value="Cancel" class="btn btn-danger" />
     </center>
 
 </form>
-@*<script>
-  $(document).ready(function () {
-      @if(!string.IsNullOrEmpty(Model?.CoverPhoto)){
-      <text>
-          $('#uploadedfile-photo').css({
-              "display": "flex", "align-items": "center"
-          })
-
-          $("#title-photo").html(`
-            <a href="/upload/Event/Photo/@Model.Id/@Model.CoverPhoto" target="_blank" style="text-decoration:none;color:inherit">@Model.CoverPhoto</a>
-          `)
-      </text>
-    }
-
-
-      $(function () {
-
-
-          $('#PhotoFile').change(function (event) {
-
-              var inputValue = event.target.files[0].name
-              $('#uploadedfile-photo').css({
-                  "display": "flex", "align-items": "center"
-              })
-
-
-              $('#title-photo').text(inputValue)
-              $('#Photo').val(inputValue)
-          });
-      });
-
-</script>
-}*@

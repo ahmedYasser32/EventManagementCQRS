@@ -2,21 +2,42 @@
 @using CQRS.Application.Features.Events.Models
 @model EventDTO
 
+
 <div class="container">
-    <div class="row">
-        <a asp-controller="Event" asp-action="Create" class="btn btn-success">Create</a>
-       
-            <div class="col-md-3 m-3">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">@Model.Title</h5>
-                        <h6 class="card-subtitle mb-2 text-muted"> From @Model.StartDate to @Model.EndDate $</h6>
-                        <p class="card-text">Source : @Model.Source.Name</p> 
-                        <p class="card-text">Content : @Model.Content</p>
-                        <a asp-controller="Event" asp-action="Detail" asp-route-id="@Model.Id" class="btn btn-success">Details</a>
+
+    <div>
+        <div>
+            <img src="~/Images/@Model.CoverPhoto" height="70" width="70" />
+
+            <h2 class="card-title">@Model.Title</h2>
+            <h6 class="card-subtitle mb-2 text-muted"> From @Model.StartDate to @Model.EndDate </h6>
+            <p class="card-text">Source : @Model.Source.Name</p>
+            <p class="card-text">Content : @Model.Content</p>
+            <div>
+                <br />
+
+                <div class="container">
+           
+                    <div class="row">
+
+                     
+                            <div class="col-md-3 m-3">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        @foreach (var item in @Model.PhotoAlbum.Photos)
+                                        {
+                                            <img src="~/Images/@item.Path" class="card-img" height="60" width="70">}
+
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <a asp-controller="Event" asp-action="Update" class="btn btn-success" asp-route-id="@Model.Id">Update</a>
+                        <a asp-controller="Event" asp-action="Delete" class="btn-outline-danger" asp-route-id="@Model.Id">Delete</a>
+
+
                     </div>
-                </div>
-            </div>
-        }
-    </div>
-</div>
